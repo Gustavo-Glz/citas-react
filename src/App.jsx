@@ -1,9 +1,14 @@
-function App() {
+import Formulario from "./components/Formulario";
+import Header from "./components/Header";
+import ListadoPacientes from "./components/ListadoPacientes";
+
+const App = () => {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Header />
+      <Formulario />
+      <ListadoPacientes />
     </>
-  )
-}
-
-export default App
+  );
+};
+export default App;
