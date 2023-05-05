@@ -4,10 +4,12 @@ import ListadoPacientes from "./components/ListadoPacientes";
 
 const App = () => {
   return (
-    <div className="container mx-auto max-w-7xl mt-20">
+    <div className="container mx-auto mt-20">
       <Header />
-      <Formulario />
-      <ListadoPacientes />
+      <div className="mt-12 md:flex md:gap-10">
+        <Formulario />
+        <ListadoPacientes />
+      </div>
     </div>
   );
 };
