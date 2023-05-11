@@ -1,6 +1,6 @@
 import Paciente from "./Paciente";
 
-const ListadoPacientes = ({ pacientes }) => {
+const ListadoPacientes = ({ pacientes, setPaciente, eliminarPaciente }) => {
   return (
     <section className="md:w-1/2 lg:w-3/5 md:h-screen md:overflow-y-auto">
       {pacientes.length > 0 ? (
@@ -13,7 +13,12 @@ const ListadoPacientes = ({ pacientes }) => {
             </span>
           </p>
           {pacientes.map((paciente) => (
-            <Paciente paciente={paciente} key={paciente.id} />
+            <Paciente
+              paciente={paciente}
+              setPaciente={setPaciente}
+              eliminarPaciente={eliminarPaciente}
+              key={paciente.id}
+            />
           ))}
         </>
       ) : (
